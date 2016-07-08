@@ -1,0 +1,32 @@
+<h1>Add a new show</h1>
+
+<%= form_for @the_show do |f  | %>
+
+  <div>
+    <%= f.label :venue %>
+    <%= f.text_field :venue %>
+  </div>
+
+  <div>
+    <%= f.label :city %>
+    <%= f.text_field :city %>
+  </div>
+
+  <div>
+    <%= f.label :date %>
+    <%= f.number_field :date %>
+  </div>
+
+  <div>
+    <%= f.label :price %>
+    <%= f.number_field :price %>
+  </div>
+
+  <div>
+    <%= f.label :artist %>
+    <%= f.text_field :artist %>
+  </div>
+
+  
+  <%= f.button %>
+<% end %>

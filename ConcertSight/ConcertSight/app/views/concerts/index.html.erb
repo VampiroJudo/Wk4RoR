@@ -1,0 +1,14 @@
+<h1>Upcoming Shows!!!</h1>
+
+
+<ul>
+	<% @concerts.each do |show|%>
+		<li>
+			<a href="/concerts/<%= show.id %>">
+			<%=show.artist%>
+			</a>
+			
+		</li>
+	<% end %>
+</ul>		
+
