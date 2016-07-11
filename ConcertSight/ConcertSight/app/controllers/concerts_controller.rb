@@ -2,7 +2,8 @@ class ConcertsController < ApplicationController
 
 	def index
 		@concerts = Concert.all.order(created_at: :asc)
-
+		# @the_shows = Concert.where(:date => DateTime.now.beginning_of_day..DateTime.now.end_of_day)
+		@the_shows = Concert.where(:date => Time.now..DateTime.now.end_of_month)
 		render "index"
 	end
 
@@ -27,6 +28,10 @@ class ConcertsController < ApplicationController
 			render "new"
 		end
 	end
+
+
+
+
 end
 
 

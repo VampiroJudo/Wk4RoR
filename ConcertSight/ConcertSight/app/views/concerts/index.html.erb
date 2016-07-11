@@ -1,8 +1,12 @@
-<h1>Upcoming Shows!!!</h1>
+<div class="navbar navbar-fixed-top">
+  Great Shows
+</div>
 
+
+<body background="http://www.acdc-bootlegs.com/approvedimages/8922.jpeg">
 
 <ul>
-	<% @concerts.each do |show|%>
+	<% @the_shows.each do |show|%>
 		<li>
 			<a href="/concerts/<%= show.id %>">
 			<%=show.artist%>
@@ -12,3 +16,8 @@
 	<% end %>
 </ul>		
 
+<h1><%= link_to("Add a new show",new_concert_path) %></h1>
+<!-- 
+<footer>
+<a href="https://www.facebook.com/" alt"Whatevs"></a>
+</footer> -->	
